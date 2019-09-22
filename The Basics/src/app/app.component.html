@@ -1,0 +1,12 @@
+<div class="container">
+  <h3>Assigment 3</h3>
+  <input
+    type="button"
+    class="btn btn-primary "
+    value="Display details"
+    (click)="toggleDetails($event)"
+  />
+  <p *ngIf="displayDetails == true">Secret Password = 42</p>
+
+  <app-event *ngFor="let event of eventArray">asdsd</app-event>
+</div>
