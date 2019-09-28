@@ -1,0 +1,8 @@
+<div class="container">
+  <h1>Hi I am APP</h1>
+  <app-game-control (newEvent)="createComponent($event)"></app-game-control>
+  <div *ngFor="let event of eventArray">
+    <app-odd *ngIf="event % 2">{{ event }}</app-odd>
+    <app-even *ngIf="!(event % 2)">{{ event }}</app-even>
+  </div>
+</div>
