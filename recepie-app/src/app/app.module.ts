@@ -7,9 +7,11 @@ import { HeaderComponent } from "./header/header.component";
 import { ShoppingComponent } from "./shopping/shopping.component";
 import { AddItemComponent } from "./shopping/add-item/add-item.component";
 import { ItemListComponent } from "./shopping/item-list/item-list.component";
-import { RecepieComponent } from './recepie/recepie.component';
-import { RecepieListComponent } from './recepie/recepie-list/recepie-list.component';
-import { RecepieDetailsComponent } from './recepie/recepie-details/recepie-details.component';
+import { RecepieComponent } from "./recepie/recepie.component";
+import { RecepieListComponent } from "./recepie/recepie-list/recepie-list.component";
+import { RecepieDetailsComponent } from "./recepie/recepie-details/recepie-details.component";
+import { RecepieItemComponent } from "./recepie/recepie-list/recepie-item/recepie-item.component";
+import { DropdownDirective } from "./shared/dropdown.directive";
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { RecepieDetailsComponent } from './recepie/recepie-details/recepie-detai
     ItemListComponent,
     RecepieComponent,
     RecepieListComponent,
-    RecepieDetailsComponent
+    RecepieDetailsComponent,
+    RecepieItemComponent,
+    DropdownDirective
   ],
   imports: [FormsModule, BrowserModule],
   providers: [],

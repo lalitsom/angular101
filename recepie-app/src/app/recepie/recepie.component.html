@@ -1,11 +1,21 @@
 <div class="container">
-  <br />
   <h3>Recepies</h3>
   <hr />
 
   <br />
   <div class="row">
-    <div class="col-md-4"><app-recepie-list></app-recepie-list></div>
-    <div class="col-md-8"><app-recepie-details></app-recepie-details></div>
+    <div class="col-md-5">
+      <app-recepie-list
+        (onRecepieSelect)="updateRecepie($event)"
+      ></app-recepie-list>
+    </div>
+    <div class="col-md-7">
+      <app-recepie-details *ngIf="selected_recepie; else infoText"
+        [recepie_details]="selected_recepie"
+      ></app-recepie-details>
+      <ng-template #infoText>
+        <h3>Please Select a Recepie!</h3>
+      </ng-template>
+    </div>
   </div>
 </div>

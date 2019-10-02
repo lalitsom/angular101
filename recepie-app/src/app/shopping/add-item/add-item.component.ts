@@ -1,4 +1,4 @@
-import { Component, OnInit,EventEmitter, Output } from '@angular/core';
+import { Component, OnInit,EventEmitter, Output, ElementRef, ViewChild } from '@angular/core';
 import { Item } from 'src/app/shared/item.model';
 
 
@@ -9,6 +9,8 @@ import { Item } from 'src/app/shared/item.model';
 })
 export class AddItemComponent implements OnInit {
   @Output() onItemAdded = new EventEmitter<Item>();
+  @ViewChild('nameInput',{static: true}) nameElem: ElementRef;
+  @ViewChild('amountInput',{static: true}) amountElem: ElementRef;
   newItem: Item = new Item("",0);
   constructor() { }
 
@@ -16,7 +18,7 @@ export class AddItemComponent implements OnInit {
   }
 
   addNewItem(){
-    this.onItemAdded.emit({name: this.newItem.name,qty: this.newItem.qty});
+    this.onItemAdded.emit({name: this.nameElem.nativeElement.value,qty: this.amountElem.nativeElement.value});
   }
 
 }
