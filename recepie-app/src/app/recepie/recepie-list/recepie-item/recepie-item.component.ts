@@ -7,7 +7,7 @@ import { Recepie } from '../../recepie.model';
   styleUrls: ['./recepie-item.component.css']
 })
 export class RecepieItemComponent implements OnInit {
-@Input() recepie : Recepie = new Recepie("","","");
+@Input() recepie : Recepie;
   constructor() { }
 
   ngOnInit() {

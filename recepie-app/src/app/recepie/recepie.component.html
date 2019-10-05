@@ -5,12 +5,11 @@
   <br />
   <div class="row">
     <div class="col-md-5">
-      <app-recepie-list
-        (onRecepieSelect)="updateRecepie($event)"
-      ></app-recepie-list>
+      <app-recepie-list></app-recepie-list>
     </div>
     <div class="col-md-7">
-      <app-recepie-details *ngIf="selected_recepie; else infoText"
+      <app-recepie-details
+        *ngIf="selected_recepie; else infoText"
         [recepie_details]="selected_recepie"
       ></app-recepie-details>
       <ng-template #infoText>

@@ -4,4 +4,8 @@
   </div>
 </div>
 <hr />
-<app-recepie-item *ngFor="let recepie of recepieList" [recepie]="recepie" (click)="emit(recepie)"></app-recepie-item>
+<app-recepie-item
+  *ngFor="let recepie of recepieList"
+  [recepie]="recepie"
+  (click)="emit(recepie)"
+></app-recepie-item>

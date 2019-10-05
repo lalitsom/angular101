@@ -1,6 +1,11 @@
 <div class="row">
   <div class="col-xs-12">
-    <img src="{{ recepie_details.imagePath }}" style="max-height: 200px;" alt="" class="img-responsive" />
+    <img
+      src="{{ recepie_details.imagePath }}"
+      style="max-height: 200px;"
+      alt=""
+      class="img-responsive"
+    />
   </div>
 </div>
 <div class="row">
@@ -15,7 +20,7 @@
         Manage Recepie <span class="caret"></span>
       </button>
       <ul class="dropdown-menu">
-        <li><a href="#">Add Ingridients</a></li>
+        <li><a href="#" (click)="addToList()">Add Ingridients to Shopping List</a></li>
         <li><a href="#">Edit Recepie</a></li>
         <li><a href="#">Delete Recepie</a></li>
       </ul>
@@ -29,6 +34,10 @@
 </div>
 <div class="row">
   <div class="col-xs-12">
-    Ingredients
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let item of recepie_details.items">
+        {{ item.name }} - {{ item.qty }}
+      </li>
+    </ul>
   </div>
 </div>
